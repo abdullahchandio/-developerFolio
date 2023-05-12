@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #FFF #FFF transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #0D6E9E #0D6E9E;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+
+}
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #FFF #FFF transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.preloader-wrapper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;		
+	height: 100%;
+	width: 100%;
+	background-color: #043B56;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 4s ease;
+	transition-duration: 0.55s;
+}
+.fade-out-animation{
+	opacity: .1s;
+	visibility: hidden;
+}
+a.navbar-brand{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+}
+.aligntext{
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+.alignimg{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navbar-nav .nav-link{
+	margin-right: 20px;
+	font-family: 'Poppins', sans-serif;
+}
+.nav-item .nav-link{
+	color: #000;
+}
+.nav-item .nav-link:hover{
+	border-bottom: 2px solid #0D6E9E;
+}
+.icon-box ul{
+	display: flex;
+}
+.icon-box ul li a{
+	padding: 10px;
+	color: #111;
+}
+.img_box img{
+	border-radius: 0 0 0 115px;
+	box-shadow: 65px -36px 9px gray;
+}
+.content_text .display-6{
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	color: #033888;
+	margin-bottom: 20px;
+}
+.content_text .display-1{
+	font-family: 'Poppins', sans-serif;
+	font-size: 60px;
+	font-weight: 600;
+	color: #043B56;
+}
+.content_text .span{
+	color: #0D6E9E;
+}
+.btn_cart_group{
+	margin-top: 2.5rem;
+}
+.btn_cart_group .btn-primary{
+	background-color: #043B56;
+	box-shadow: 0 0 10px #043B56;
+    border: none;
+    color: #fff;
+    padding: 8px 25px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    margin-right:10px ;
+}
+.btn_cart_group .btn-primary:hover{
+	background-color: transparent;
+	color: #043B56;
+	border: 2px solid #043B56;
+}
+.btn_cart_group .btn-outline-primary{
+	background-color: none;
+	border: 2px solid #043B56;
+	color: #043B56;
+	font-family: 'Poppins', sans-serif;
+}
+.btn_cart_group .btn-outline-primary:hover{
+	background-color: #043B56;
+	box-shadow: 0 0 20px #043B56;
+    border: none;
+    color: #fff;
+
+}
+.navbar-toggler{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	transition: .5s ease-in-out;
+}
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+	outline: none;
+	box-shadow: none;
+	border: 0;
+}
+.navbar-toggler div{
+	padding: 0;
+	margin:0;
+}
+.toggler-icon{
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	background-color:#043B56;
+	border-radius: 1px;
+	opacity: 1;
+	left: 0;
+	transform: rotate(0deg);
+	transition: .25 ease-in-out;
+}
+.bar2{
+	margin-top: 0px;
+}
+.navbar-toggler .bar1{
+	margin-top: 0px;
+	transform:rotate(135deg);
+}
+.navbar-toggler .bar2{
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.navbar-toggler .bar3{
+	margin-top: 0px;
+	transform: rotate(135deg);
+}
+@media (max-width:767px) {
+  .row {
+   flex-direction: column-reverse;
+  }
+  .img_box img{
+  	margin-bottom: 2rem;
+  	width: 100%;
+  	height: auto;
+  }
+  .alignimg{
+  	display: block;
+  }
+  .content_text{
+  	width: 100%;
+  	display: block;
+  	padding: 1rem;
+  }
+  .content_text .display-1{
+  	font-size: 2rem;
+  }
+}
